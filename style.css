@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px; 
+}
+
+body {
+    font-family: "Manrope", sans-serif; 
+    min-height: 100vh; 
+    align-items: center;
+    background-color: hsl(210, 46%, 95%); 
+}
+
+img {
+    width: 100%; 
+}
+
+.screen {
+    min-height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    margin: 0 2.4rem; 
+    background-color: white; 
+    border-radius: 1.5rem; 
+    overflow: hidden; 
+}
+
+.text {
+    padding: 3.2rem 3.2rem 0 3.2rem; 
+}
+
+h1 {
+    font-size: 1.6rem; 
+    line-height: 1.5; 
+    letter-spacing: .02rem; 
+    color: hsl(217, 19%, 35%); 
+}
+
+.para {
+    font-size: 1.3rem; 
+    line-height: 1.5; 
+    letter-spacing: .012rem;
+    margin: 2rem 0; 
+    font-weight: 500; 
+    color: hsl(214, 17%, 51%); 
+}
+
+.card-bottom {
+    position: relative; 
+    color: hsl(214, 17%, 51%);
+    background-color: white;
+    font-size: 1.3rem; 
+    line-height: 1.5; 
+}
+
+.anterior {
+    display: flex; 
+    gap: 1.5rem; 
+    align-items: center;
+    padding: 1rem 3.2rem; 
+    transition: all 0.2s ease; 
+    cursor: pointer; 
+}
+
+.avatar {
+    width: 4rem; 
+    overflow: hidden; 
+    border-radius: 50%; 
+}
+
+.card-bottom .name {
+    font-weight: 700; 
+    color: hsl(217, 19%, 35%); ; 
+}
+
+.share {
+    border-radius: 50%; 
+    overflow: hidden; 
+    width: 3.2rem; 
+    padding: .8rem; 
+    margin-left: auto; 
+}
+
+.anterior .share {
+    background: hsl(210, 46%, 95%); 
+}
+
+.posterior {
+    display: flex; 
+    background-color: hsl(217, 19%, 35%); 
+    align-items: center;
+    padding: 1rem 3.2rem; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    transition: all 0.2s ease; 
+    cursor: pointer; 
+}
+
+.icons {
+    display: flex; 
+    gap: 1.6rem; 
+    align-items: center;
+}
+
+.icon {
+    width: 2.rem; 
+}
+
+.posterior .share {
+    background-color: hsl(212, 23%, 69%); 
+
+}
+
+.share-text {
+    color: hsl(212, 23%, 69%); 
+    letter-spacing: .5rem; 
+    margin-right: 1.6rem; 
+}
+
+.hidden {
+    opacity: 0; 
+    z-index: -3; 
+}
+
+
+@media screen and (min-width: 900px) {
+    main {
+        display: flex; 
+        width: 73rem; 
+        padding-bottom: 0;
+        overflow: unset;  
+    }
+    .picture {
+        width: 28.5rem; 
+    }
+    .picture img {
+        height: 100%; 
+    }
+    .text-content {
+        width: 44rem; 
+        padding-bottom: 3rem; 
+        position: relative; 
+        z-index: 4; 
+    }
+    .text {
+        padding: 3rem 4rem 0 4rem; 
+    }
+    h1 {
+        font-size: 2rem; 
+    }
+    .card-bottom {
+        position: relative; 
+    }
+    .anterior {
+        padding-bottom: 0; 
+        z-index: 2; 
+    }
+
+    .share2 {
+        display: none; 
+    }
+    .posterior {
+        transform: translatey(-120%) translatex(25%);  
+        width: unset; 
+        border-radius: 1.5rem; 
+        left: unset; 
+        right: 0; 
+        box-shadow: 0 1rem 5px hsl(210, 46%, 95%); 
+        z-index: 3; 
+        gap: 1rem; 
+    }
+    .share1 {
+        position: relative; 
+    }
+    .triangle {
+        position: absolute; 
+        top: 0; 
+        right: 0; 
+        border-top: 14px solid hsl(217, 19%, 35%);  
+        border-left: 7px solid transparent;  
+        border-right: 7px solid transparent; 
+        width: 0; 
+        height: 0;   
+        z-index: 6; 
+        transform: translatey(-1.2rem) translatex(-300%);       
+        transition: all 0.2s ease; 
+    }
+
+}
